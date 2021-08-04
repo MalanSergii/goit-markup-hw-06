@@ -121,6 +121,15 @@ h4 {
 .link.current {
   color: var(--active-color);
 }
+
+.icon {
+  margin-right: 10px;
+}
+
+.contact-list .link {
+  display: flex;
+  align-items: center;
+}
 .contact-list {
   display: flex;
   align-items: center;

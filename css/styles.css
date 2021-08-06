@@ -371,7 +371,6 @@ h4 {
 }
 .customers-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .regular-customers .list-item {
@@ -379,6 +378,9 @@ h4 {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+}
+.regular-customers .list-item:not(:last-child) {
+  margin-right: 30px;
 }
 .regular-customers .link-image {
   fill: #afb1b8;

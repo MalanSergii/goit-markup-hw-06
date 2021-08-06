@@ -358,43 +358,45 @@ h4 {
 /* -----------regular-customers----------- */
 
 .regular-customers {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 94px 0;
 }
+
 .customers-title {
   font-weight: bold;
   font-size: 36px;
-  line-height: 1.17;
+  line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
+  color: var(--accent-color);
 }
+
 .customers-list {
   display: flex;
 }
-.regular-customers .item-link {
-  display: block;
-  height: 100%;
-  padding: 16px 32px;
+
+.customers-list .list-item:not(:last-child) {
+  margin-right: 30px;
 }
-.regular-customers .list-item {
+.customers-list .item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
-.regular-customers .list-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .regular-customers .link-image {
   fill: #afb1b8;
 }
-.regular-customers .list-item:hover,
-.regular-customers .list-item:focus {
+.customers-list .item-link:hover,
+.customers-list .item-link:focus {
   border: 1px solid var(--active-color);
 }
-.regular-customers .list-item:hover svg,
-.regular-customers .list-item:focus svg {
+.customers-list .item-link:hover svg,
+.customers-list .item-link:focus svg {
   fill: var(--active-color);
 }
 
@@ -464,16 +466,7 @@ h4 {
 .footer-links .title-list {
   display: flex;
 }
-/* .footer-links .list-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  height: 44px;
-  width: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-} */
+
 .footer-links .list-item:not(:last-child) {
   margin-right: 10px;
 }

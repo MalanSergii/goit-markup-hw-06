@@ -246,25 +246,151 @@ h4 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 40px;
 
   background: var(--third-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+  margin-bottom: 12px;
+}
+.modal-text {
+  text-align: left;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+.user-info {
+  position: relative;
+  display: block;
+}
+.modal-icon {
+  position: absolute;
+  top: 28px;
+  left: 15px;
+  transition: fill var(--transition-duration) var(--timing-function);
+}
+.form {
+  outline: none;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 12px 12px 42px;
+  transition: border var(--transition-duration) var(--timing-function);
+}
+.form:focus {
+  border: 1px solid var(--active-color);
+}
+.form:focus + .modal-icon {
+  fill: var(--active-color);
+}
+.textarea {
+  resize: none;
+  height: 120px;
+  margin-bottom: 20px;
+  padding: 12px;
+}
+.textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.user-agreement {
+  position: relative;
+  display: block;
+
+  margin-bottom: 30px;
+}
+.agr-check-box {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  display: block;
+  height: 16px;
+  width: 16px;
+  background-image: url(../images/unchacked.svg);
+  background-repeat: no-repeat;
+}
+.agreement-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+  margin-bottom: 30px;
+}
+.form-agreement:checked + .agr-check-box {
+  background-image: url(../images/checked.svg);
+}
+.agr-link {
+  color: var(--active-color);
+}
+.form-agreement {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.form-submit {
+  border: none;
+  display: block;
+  margin: auto auto;
+  padding: 10px 55px;
+  background: var(--active-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--third-color);
+  cursor: pointer;
+}
 
 .close {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 8px;
   right: 8px;
-  background-image: url(../images/main-paige/hero/close.svg);
   background-size: contain;
   background-color: #fff;
   width: 30px;
   height: 30px;
   border: 0;
   cursor: pointer;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
+.close:hover .icon-close,
+.close:focus .icon-close {
+  fill: var(--active-color);
+}
+.icon-close {
+  fill: rgba(0, 0, 0, 1);
+  transition: fill var(--transition-duration) var(--timing-function);
+}
+
 /* ------section:specials------ */
 .specials {
   padding-top: 94px;
@@ -569,6 +695,10 @@ h4 {
   background: rgba(255, 255, 255, 0.1);
   transition: background var(--transition-duration) var(--timing-function);
 }
+.footer-links {
+  margin-right: auto;
+}
+
 .footer-links .item-link:hover,
 .footer-links .item-link:focus {
   background: var(--active-color);
@@ -576,6 +706,64 @@ h4 {
 .footer-links .link-image {
   fill: var(--third-color);
 }
+.form-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--third-color);
+  margin-bottom: 20px;
+}
+.form-email {
+  display: inline-block;
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 15px 16px;
+  margin-right: 12px;
+  color: var(--third-color);
+}
+.form-email::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-btn {
+  border: none;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 200px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--third-color);
+  padding: 10px 29px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.icon-send {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: 13px;
+  right: 28px;
+  fill: var(--third-color);
+}
+
 /* --------------------Portfolio-------------------- */
 
 .portfolio {
